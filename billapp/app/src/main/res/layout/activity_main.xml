@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="?android:attr/windowBackground"
+    tools:context=".MainActivity">
+
+    <!-- Title of the app -->
+    <TextView
+        android:id="@+id/idAppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bill Splitter App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText" />
+
+    <!-- Edit text to enter amount -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter total amount to split"
+        app:hintTextColor="?android:textColorPrimary"
+        android:textColorHint="?android:textColorPrimary"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtAMount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Edit text to enter number of people to split amount -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILPerson"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter number of people to split"
+        app:hintTextColor="?android:textColorPrimary"
+        android:textColorHint="?android:textColorPrimary"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtPeople"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Edit text to enter tip amount -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILTip"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter tip amount"
+        app:hintTextColor="?android:textColorPrimary"
+        android:textColorHint="?android:textColorPrimary"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtTip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Button to get individual amount -->
+    <Button
+        android:id="@+id/idBtnGetAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Amount"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Button to reset -->
+    <Button
+        android:id="@+id/idBtnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Text view to display the individual amount -->
+    <TextView
+        android:id="@+id/idTVIndividualAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Individual Amount : "
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
